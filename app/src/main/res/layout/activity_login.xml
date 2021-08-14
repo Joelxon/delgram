@@ -95,6 +95,7 @@
             android:textColor="#80FFFFFF"
             android:textSize="16sp"/>
         <TextView
+            android:id="@+id/sign_up"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:text="Sign Up"
