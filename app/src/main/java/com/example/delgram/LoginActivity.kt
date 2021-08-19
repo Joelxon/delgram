@@ -4,6 +4,8 @@ import android.content.Intent
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
 import com.example.delgram.databinding.ActivityLoginBinding
+import com.example.delgram.fragments.HomeFragment
+import com.joelson.delgram.MainActivity
 
 class LoginActivity : AppCompatActivity() {
 
@@ -17,6 +19,12 @@ class LoginActivity : AppCompatActivity() {
         tvSignup.setOnClickListener {
             val intent: Intent = Intent(this,SignUpActivity::class.java)
             startActivity(intent)
+        }
+
+        val tvLogin = ActivityLoginBinding.btnLogin
+        tvLogin.setOnClickListener {
+            val loginIntent: Intent = Intent (this, MainActivity::class.java)
+            startActivity(loginIntent)
         }
 
 

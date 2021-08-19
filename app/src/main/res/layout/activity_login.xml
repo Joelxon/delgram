@@ -12,61 +12,66 @@
         android:id="@+id/delgram_logo"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_marginTop="200dp"
         android:src="@drawable/ic_delgram_logo"
+        app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent" />
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.33984375" />
 
-    <com.google.android.material.textfield.TextInputLayout
-        android:id="@+id/tl_username"
+    <EditText
+        android:id="@+id/username"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:hint="Username/Email/Phone Number"
+        android:background="@drawable/roundstyle"
+        android:textSize="16sp"
+        android:paddingTop="14dp"
+        android:paddingBottom="14dp"
+        android:paddingLeft="16dp"
+        android:gravity="top"
+        android:inputType="text"
         android:layout_marginStart="16dp"
         android:layout_marginEnd="16dp"
         android:layout_marginTop="32dp"
         app:layout_constraintTop_toBottomOf="@id/delgram_logo"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
-        >
 
-        <EditText
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:inputType="text"/>
-    </com.google.android.material.textfield.TextInputLayout>
+        />
 
-    <com.google.android.material.textfield.TextInputLayout
-        android:id="@+id/tl_password"
+    <EditText
+        android:id="@+id/password"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:hint="Password"
+        android:hint="password"
+        android:background="@drawable/roundstyle"
+        android:textSize="16sp"
+        android:paddingTop="14dp"
+        android:paddingBottom="14dp"
+        android:paddingLeft="16dp"
+        android:gravity="top"
+        android:inputType="textPassword"
         android:layout_marginStart="16dp"
         android:layout_marginEnd="16dp"
-        android:layout_marginTop="32dp"
-        app:layout_constraintTop_toBottomOf="@id/tl_username"
+        android:layout_marginTop="16dp"
+        app:layout_constraintTop_toBottomOf="@id/username"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
-        >
 
-        <EditText
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:inputType="text"/>
-    </com.google.android.material.textfield.TextInputLayout>
+        />
+
 
     <TextView
         android:id="@+id/forgot_password"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:text="Forgot Password?"
-        app:layout_constraintTop_toBottomOf="@id/tl_password"
-        app:layout_constraintEnd_toEndOf="@id/tl_password"
-        android:textColor="#3797EF"
         android:layout_marginTop="16dp"
+        android:textColor="#3797EF"
         android:textSize="16sp"
-        />
+        app:layout_constraintEnd_toEndOf="@+id/password"
+        app:layout_constraintTop_toBottomOf="@+id/password" />
 
     <Button
         android:id="@+id/btn_login"
@@ -76,10 +81,11 @@
         android:layout_marginStart="16dp"
         android:layout_marginEnd="16dp"
         android:layout_marginTop="16dp"
-        android:background="@color/acent"
+        android:background="@drawable/button_acent_background"
         android:text="Login"
         android:textSize="16sp"
-        android:textAllCaps="false"/>
+        android:textAllCaps="false"
+        />
 
     <LinearLayout
         android:layout_width="match_parent"
@@ -89,18 +95,21 @@
         app:layout_constraintBottom_toBottomOf="parent"
         android:layout_marginBottom="32dp">
         <TextView
+            android:id="@+id/dont_have_account"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:text="Don't have an account? "
             android:textColor="#80FFFFFF"
-            android:textSize="16sp"/>
+            android:textSize="16sp"
+            />
+
         <TextView
             android:id="@+id/sign_up"
             android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
+            android:layout_height="match_parent"
             android:text="Sign Up"
-            android:textSize="16sp"
-            android:textColor="@color/white"/>
+            android:textColor="@color/white"
+            android:textSize="16sp" />
 
     </LinearLayout>
 
