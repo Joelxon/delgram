@@ -67,7 +67,7 @@
         android:layout_height="129dp"
         android:orientation="vertical"
         android:background="@drawable/ic_search_bottom_rectangle"
-        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintBottom_toTopOf="@id/guideline_fs"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintEnd_toEndOf="parent">
 
@@ -94,12 +94,15 @@
 
             android:layout_marginBottom="16dp"
             android:background="@drawable/button_acent_background"/>
-
-
-
-
-
     </LinearLayout>
+
+    <androidx.constraintlayout.widget.Guideline
+        android:id="@+id/guideline_fs"
+        android:layout_width="wrap_content"
+        android:layout_height="match_parent"
+        android:orientation="horizontal"
+        app:layout_constraintGuide_percent="0.85"
+        />
 
 
 

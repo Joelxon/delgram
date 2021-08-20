@@ -9,6 +9,7 @@
         <entry key="app/src/main/res/drawable/ic_privacy_icon.xml" value="0.38125" />
         <entry key="app/src/main/res/drawable/ic_profile_options.xml" value="0.38125" />
         <entry key="app/src/main/res/drawable/roundstyle.xml" value="0.21614583333333334" />
+        <entry key="app/src/main/res/layout/activity_add_post.xml" value="0.22418478260869565" />
         <entry key="app/src/main/res/layout/activity_login.xml" value="0.25" />
         <entry key="app/src/main/res/layout/activity_main.xml" value="0.1707193515704154" />
         <entry key="app/src/main/res/layout/activity_sign_up.xml" value="0.375" />

@@ -1,4 +1,4 @@
-package com.joelson.delgram
+package com.example.delgram
 
 import android.content.Intent
 import androidx.appcompat.app.AppCompatActivity
@@ -30,7 +30,7 @@ class MainActivity : AppCompatActivity() {
                 }
                 R.id.nav_add -> {
                     item.isChecked = false
-                    startActivity(Intent(this, AddPostActivity::class.java))
+                    startActivity(Intent(this@MainActivity, AddPostActivity::class.java))
                     return@OnNavigationItemSelectedListener true
                 }
                 R.id.nav_profile -> {
@@ -45,12 +45,29 @@ class MainActivity : AppCompatActivity() {
         super.onCreate(savedInstanceState)
         mBinding = ActivityMainBinding.inflate(layoutInflater)
         setContentView(mBinding.root)
+
+
+        if (isCreate) {
+            moveToFragment(ProfileFragment())
+            isCreate = false
+        } else {
+            moveToFragment(HomeFragment())
+        }
         mBinding.bottomNavView.setOnNavigationItemSelectedListener (onNavigationItemSelectedListener)
+
+
+
     }
+
 
     private fun moveToFragment(fragment: Fragment) {
         val fragmentTrans = supportFragmentManager.beginTransaction()
         fragmentTrans.replace(mBinding.fragmentContainer.id, fragment)
         fragmentTrans.commit()
+    }
+
+    companion object {
+        var isCreate = false
+        var moveTo = false
     }
 }
